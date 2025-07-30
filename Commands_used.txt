@@ -1,0 +1,30 @@
+# OSINT Commands Used on wattpad.com
+
+# theHarvester - email and subdomain recon
+theHarvester -d wattpad.com -b all
+
+# WHOIS lookup
+whois wattpad.com
+
+# DNS enum
+dnsenum wattpad.com
+
+# DNS recon
+dnsrecon -d wattpad.com
+
+# nslookup
+nslookup
+> set type=any
+> wattpad.com
+
+# recon-ng setup
+recon-ng
+> marketplace install all
+> use recon/domains-hosts/bing_domain_web
+> set SOURCE wattpad.com
+> run
+> use recon/domains-hosts/hackertarget
+> set SOURCE wattpad.com
+> run
+
+# Optional: Maltego (GUI-based)
